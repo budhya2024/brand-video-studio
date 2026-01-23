@@ -106,7 +106,7 @@ const Services = () => {
 
       <div className="container relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">What We Offer</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
             Our <span className="gradient-text">Services</span>
@@ -126,7 +126,8 @@ const Services = () => {
                   ? "card-gradient border-primary/30 hover:border-primary/60 hover:shadow-[0_0_40px_hsl(24,100%,55%,0.15)]"
                   : "bg-card/50 border-border hover:border-border/80 hover:bg-card"
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              data-aos="fade-up"
+              data-aos-delay={index * 50}
             >
               {/* Featured Badge */}
               {service.featured && (

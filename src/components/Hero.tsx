@@ -24,29 +24,29 @@ const Hero = () => {
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8" data-aos="fade-down">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-muted-foreground">Professional Video Production</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">
             <span className="text-foreground">Mit</span>{" "}
             <span className="gradient-text">Innovative</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4" data-aos="fade-up" data-aos-delay="200">
             Transform Your Vision Into Powerful Content
           </p>
 
-          <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="300">
             Partner with us to build powerful advertisements for your business. 
             Professional video editing, advertising, and digital marketing solutions.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
             <Button variant="hero" size="xl" onClick={scrollToContact}>
               <Phone className="w-5 h-5" />
               Contact Us Now
@@ -58,13 +58,13 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="grid grid-cols-3 gap-8 mt-20">
             {[
               { value: "500+", label: "Projects Delivered" },
               { value: "100+", label: "Happy Clients" },
               { value: "5+", label: "Years Experience" },
             ].map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" data-aos="zoom-in" data-aos-delay={500 + index * 100}>
                 <div className="text-3xl md:text-4xl font-display font-bold gradient-text">{stat.value}</div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
               </div>
