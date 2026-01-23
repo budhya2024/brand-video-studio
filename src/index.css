@@ -120,3 +120,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(24 100% 55%);
 }
+
+/* Swiper customizations */
+.swiper-pagination-bullet {
+  background: hsl(220 15% 30%) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: hsl(24 100% 55%) !important;
+}
+
+.demo-swiper .swiper-pagination,
+.testimonials-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+/* AOS custom styles */
+[data-aos] {
+  pointer-events: auto !important;
+}
