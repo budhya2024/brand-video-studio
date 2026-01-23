@@ -1,0 +1,84 @@
+import { Button } from "@/components/ui/button";
+import { Play, Phone, ArrowRight } from "lucide-react";
+
+const Hero = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToDemo = () => {
+    document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[hsl(350,100%,60%)]/20 rounded-full blur-[100px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+      </div>
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+
+      <div className="container relative z-10 px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-sm text-muted-foreground">Professional Video Production</span>
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <span className="text-foreground">Mit</span>{" "}
+            <span className="gradient-text">Innovative</span>
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            Transform Your Vision Into Powerful Content
+          </p>
+
+          <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            Partner with us to build powerful advertisements for your business. 
+            Professional video editing, advertising, and digital marketing solutions.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <Button variant="hero" size="xl" onClick={scrollToContact}>
+              <Phone className="w-5 h-5" />
+              Contact Us Now
+            </Button>
+            <Button variant="heroOutline" size="xl" onClick={scrollToDemo}>
+              <Play className="w-5 h-5" />
+              Watch Demo
+            </Button>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 mt-20 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            {[
+              { value: "500+", label: "Projects Delivered" },
+              { value: "100+", label: "Happy Clients" },
+              { value: "5+", label: "Years Experience" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-display font-bold gradient-text">{stat.value}</div>
+                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
+          <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
