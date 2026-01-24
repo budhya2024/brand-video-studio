@@ -45,7 +45,7 @@ const SocialIcons = () => {
   ];
 
   return (
-    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3">
+    <div className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-40 flex-col gap-3">
       {socials.map((social, index) => (
         <a
           key={index}

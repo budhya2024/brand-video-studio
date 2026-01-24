@@ -72,16 +72,15 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator - Right Side */}
-        <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-2">
-          <div className="w-[2px] h-16 bg-gradient-to-b from-transparent via-primary to-transparent animate-pulse" />
-          <div className="animate-bounce">
-            <ArrowDown className="w-5 h-5 text-primary" />
-          </div>
-          <span className="text-xs text-muted-foreground writing-mode-vertical rotate-180" style={{ writingMode: 'vertical-rl' }}>
-            Scroll Down
-          </span>
-          <div className="w-[2px] h-16 bg-gradient-to-b from-transparent via-primary to-transparent animate-pulse" />
+        {/* Scroll Down Button - Right Side (like footer) */}
+        <div className="fixed right-6 bottom-8 z-40 hidden md:flex">
+          <button
+            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+            className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
+            title="Scroll Down"
+          >
+            <ArrowDown className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </section>

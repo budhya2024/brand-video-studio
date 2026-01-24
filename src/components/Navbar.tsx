@@ -60,7 +60,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
+              {navLinks.filter(link => link.id !== 'contact').map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}

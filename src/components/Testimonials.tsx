@@ -137,13 +137,15 @@ const Testimonials = () => {
             ))}
           </Swiper>
 
-          {/* Custom Navigation Arrows */}
-          <button className="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button className="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
-            <ChevronRight className="w-6 h-6" />
-          </button>
+          {/* Custom Navigation Arrows - Right Side */}
+          <div className="flex justify-end gap-3 mt-6">
+            <button className="testimonial-prev w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button className="testimonial-next w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
