@@ -1,8 +1,9 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const testimonials = [
   {
@@ -77,12 +78,16 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Swiper */}
-        <div className="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <div className="max-w-6xl mx-auto relative" data-aos="fade-up" data-aos-delay="100">
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay, Pagination, Navigation]}
             spaceBetween={30}
             slidesPerView={1}
             pagination={{ clickable: true }}
+            navigation={{
+              prevEl: '.testimonial-prev',
+              nextEl: '.testimonial-next',
+            }}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             breakpoints={{
               640: {
@@ -98,8 +103,8 @@ const Testimonials = () => {
             className="testimonials-swiper pb-12"
           >
             {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-card border border-border rounded-2xl p-6 h-full flex flex-col hover:border-primary/30 transition-all duration-300">
+              <SwiperSlide key={index} className="h-auto">
+                <div className="bg-card border border-border rounded-2xl p-6 h-full min-h-[320px] flex flex-col hover:border-primary/30 transition-all duration-300">
                   {/* Quote Icon */}
                   <div className="mb-4">
                     <Quote className="w-10 h-10 text-primary/30" />
@@ -113,12 +118,12 @@ const Testimonials = () => {
                   </div>
 
                   {/* Content */}
-                  <p className="text-muted-foreground flex-grow mb-6 leading-relaxed">
+                  <p className="text-muted-foreground flex-grow mb-6 leading-relaxed line-clamp-4">
                     "{testimonial.content}"
                   </p>
 
                   {/* Author */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-border">
+                  <div className="flex items-center gap-4 pt-4 border-t border-border mt-auto">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-[hsl(350,100%,60%)] flex items-center justify-center text-primary-foreground font-bold">
                       {testimonial.avatar}
                     </div>
@@ -131,6 +136,14 @@ const Testimonials = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {/* Custom Navigation Arrows */}
+          <button className="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button className="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+            <ChevronRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
     </section>

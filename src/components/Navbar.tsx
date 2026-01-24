@@ -70,7 +70,7 @@ const Navbar = () => {
                 </button>
               ))}
               <Button variant="hero" onClick={() => scrollToSection("contact")}>
-                Get Started
+                Contact Us
               </Button>
             </div>
 
@@ -122,7 +122,7 @@ const Navbar = () => {
                 animation: isMobileMenuOpen ? `slideInFromLeft 0.5s ease-out ${navLinks.length * 0.1}s both` : 'none'
               }}
             >
-              Get Started
+              Contact Us
             </Button>
           </nav>
 

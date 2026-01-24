@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, Phone, ArrowRight } from "lucide-react";
+import { Play, Phone, ArrowDown } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -49,7 +49,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
             <Button variant="hero" size="xl" onClick={scrollToContact}>
               <Phone className="w-5 h-5" />
-              Contact Us Now
+              Contact Us
             </Button>
             <Button variant="heroOutline" size="xl" onClick={scrollToDemo}>
               <Play className="w-5 h-5" />
@@ -72,9 +72,16 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
-          <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
+        {/* Scroll Indicator - Right Side */}
+        <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-2">
+          <div className="w-[2px] h-16 bg-gradient-to-b from-transparent via-primary to-transparent animate-pulse" />
+          <div className="animate-bounce">
+            <ArrowDown className="w-5 h-5 text-primary" />
+          </div>
+          <span className="text-xs text-muted-foreground writing-mode-vertical rotate-180" style={{ writingMode: 'vertical-rl' }}>
+            Scroll Down
+          </span>
+          <div className="w-[2px] h-16 bg-gradient-to-b from-transparent via-primary to-transparent animate-pulse" />
         </div>
       </div>
     </section>
