@@ -79,73 +79,75 @@ const Testimonials = () => {
 
         {/* Testimonials Swiper */}
         <div className="max-w-6xl mx-auto relative" data-aos="fade-up" data-aos-delay="100">
-          <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={30}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            navigation={{
-              prevEl: '.testimonial-prev',
-              nextEl: '.testimonial-next',
-            }}
-            autoplay={{ delay: 4000, disableOnInteraction: false }}
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              }
-            }}
-            className="testimonials-swiper pb-12"
-          >
-            {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index} className="h-auto">
-                <div className="bg-card border border-border rounded-2xl p-6 h-full min-h-[320px] flex flex-col hover:border-primary/30 transition-all duration-300">
-                  {/* Quote Icon */}
-                  <div className="mb-4">
-                    <Quote className="w-10 h-10 text-primary/30" />
-                  </div>
+          {/* Custom Navigation Arrows - Left Side */}
+          <button className="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
 
-                  {/* Rating */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-primary fill-primary" />
-                    ))}
-                  </div>
-
-                  {/* Content */}
-                  <p className="text-muted-foreground flex-grow mb-6 leading-relaxed line-clamp-4">
-                    "{testimonial.content}"
-                  </p>
-
-                  {/* Author */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-border mt-auto">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-[hsl(350,100%,60%)] flex items-center justify-center text-primary-foreground font-bold">
-                      {testimonial.avatar}
+          <div className="px-12 md:px-16">
+            <Swiper
+              modules={[Autoplay, Pagination, Navigation]}
+              spaceBetween={30}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+              navigation={{
+                prevEl: '.testimonial-prev',
+                nextEl: '.testimonial-next',
+              }}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                }
+              }}
+              className="testimonials-swiper pb-12"
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index} className="h-auto">
+                  <div className="bg-card border border-border rounded-2xl p-6 h-full min-h-[320px] flex flex-col hover:border-primary/30 transition-all duration-300">
+                    {/* Quote Icon */}
+                    <div className="mb-4">
+                      <Quote className="w-10 h-10 text-primary/30" />
                     </div>
-                    <div>
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}, {testimonial.company}</p>
+
+                    {/* Rating */}
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-primary fill-primary" />
+                      ))}
+                    </div>
+
+                    {/* Content */}
+                    <p className="text-muted-foreground flex-grow mb-6 leading-relaxed line-clamp-4">
+                      "{testimonial.content}"
+                    </p>
+
+                    {/* Author */}
+                    <div className="flex items-center gap-4 pt-4 border-t border-border mt-auto">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-[hsl(350,100%,60%)] flex items-center justify-center text-primary-foreground font-bold">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.role}, {testimonial.company}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
 
           {/* Custom Navigation Arrows - Right Side */}
-          <div className="flex justify-end gap-3 mt-6">
-            <button className="testimonial-prev w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button className="testimonial-next w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
+          <button className="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300">
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
         </div>
       </div>
     </section>

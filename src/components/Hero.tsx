@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, Phone, ArrowDown } from "lucide-react";
+import { Play, Phone, ArrowUp } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -8,6 +8,10 @@ const Hero = () => {
 
   const scrollToDemo = () => {
     document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -46,7 +50,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+          <div className="flex flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
             <Button variant="hero" size="xl" onClick={scrollToContact}>
               <Phone className="w-5 h-5" />
               Contact Us
@@ -72,14 +76,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Down Button - Right Side (like footer) */}
+        {/* Scroll to Top Button - Right Side */}
         <div className="fixed right-6 bottom-8 z-40 hidden md:flex">
           <button
-            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+            onClick={scrollToTop}
             className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
-            title="Scroll Down"
+            title="Scroll to Top"
           >
-            <ArrowDown className="w-6 h-6" />
+            <ArrowUp className="w-6 h-6" />
           </button>
         </div>
       </div>

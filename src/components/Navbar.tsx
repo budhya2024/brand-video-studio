@@ -64,9 +64,10 @@ const Navbar = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="relative text-muted-foreground hover:text-foreground transition-colors group"
                 >
                   {link.name}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
                 </button>
               ))}
               <Button variant="hero" onClick={() => scrollToSection("contact")}>
