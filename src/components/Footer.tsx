@@ -152,16 +152,10 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-border pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center justify-center">
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Mit Innovative. All rights reserved.
             </p>
-            <button
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-            >
-              <ArrowUp className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>
