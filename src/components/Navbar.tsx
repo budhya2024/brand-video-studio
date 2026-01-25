@@ -52,8 +52,9 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <a href="/" className="flex items-center gap-2 z-50">
-              <span className="font-display text-2xl font-bold text-foreground">
-                Mit Innovative
+              <span className="font-display text-2xl font-bold">
+                <span className="text-foreground">Mit</span>{" "}
+                <span className="gradient-text">Innovative</span>
               </span>
             </a>
 
