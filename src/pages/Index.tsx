@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import CTABanner from "@/components/CTABanner";
 import Demo from "@/components/Demo";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -16,12 +17,11 @@ const Index = () => {
     AOS.init({
       duration: 800,
       easing: "ease-out-cubic",
-      once: false, // Animate multiple times
-      mirror: true, // Animate on scroll up too
+      once: false,
+      mirror: true,
       offset: 100,
     });
 
-    // Refresh AOS on scroll for better performance
     window.addEventListener('scroll', () => {
       AOS.refresh();
     });
@@ -39,6 +39,7 @@ const Index = () => {
       <SocialIcons />
       <Hero />
       <Services />
+      <CTABanner />
       <Demo />
       <Testimonials />
       <FAQ />
