@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import CTABanner from "@/components/CTABanner";
 import Demo from "@/components/Demo";
 import Testimonials from "@/components/Testimonials";
+import MeetOwner from "@/components/MeetOwner";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -42,6 +43,7 @@ const Index = () => {
       <CTABanner />
       <Demo />
       <Testimonials />
+      <MeetOwner />
       <FAQ />
       <ContactForm />
       <Footer />
