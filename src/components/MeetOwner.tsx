@@ -1,5 +1,5 @@
 import { Video, Award, Users, Sparkles } from "lucide-react";
-import ownerImage from "@/assets/images/owner-amit.png";
+import ownerImage from "@/assets/images/founder-amit.png";
 
 const MeetOwner = () => {
   const highlights = [
