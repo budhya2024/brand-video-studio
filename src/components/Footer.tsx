@@ -73,7 +73,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="/" className="inline-block mb-6">
-              <span className="font-display text-2xl font-bold gradient-text">
+              <span className="font-display text-2xl font-bold text-foreground">
                 Mit Innovative
               </span>
             </a>
