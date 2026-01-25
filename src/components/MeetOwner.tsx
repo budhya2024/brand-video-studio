@@ -26,7 +26,7 @@ const MeetOwner = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Owner Image */}
           <div className="flex justify-center" data-aos="fade-right">
             <div className="relative">
