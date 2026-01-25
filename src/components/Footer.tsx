@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, ArrowUp } from "lucide-react";
+import logo from "/images/logo.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -74,11 +75,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <a href="/" className="inline-block mb-6">
               <span className="">
-                <img
-                  src="src/assets/images/logo.png"
-                  alt="Logo"
-                  className="h-10 w-auto object-contain inline-block mr-2"
-                />
+                 <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto mr-2" />
               </span>
             </a>
             <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -160,7 +157,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                Ranaghat, Nadia, India Pin-741159
+                taherpur, Nadia, Pin-741159 ,West Bengal
               </li>
             </ul>
           </div>

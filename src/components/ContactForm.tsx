@@ -13,9 +13,12 @@ const ContactForm = () => {
       <div className="container relative z-10 px-4">
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+            Get In Touch
+          </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Ready to <span className="gradient-text">Transform</span> Your Brand?
+            Ready to <span className="gradient-text">Transform</span> Your
+            Brand?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Partner with us to build powerful advertisements for your business
@@ -24,30 +27,39 @@ const ContactForm = () => {
 
         <div className=" mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Google Map */}
-          <div className="lg:col-span-3 relative rounded-3xl overflow-hidden border border-border h-100 lg:h-auto" data-aos="fade-right">
+          <div
+            className="lg:col-span-3 relative rounded-3xl overflow-hidden border border-border h-100 lg:h-auto"
+            data-aos="fade-right"
+          >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4123456789!2d72.5714!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzIxLjAiTiA3MsKwMzQnMTcuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps?q=Taherpur,+Nadia,+West+Bengal&output=embed"
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '400px' }}
+              style={{ border: 0, minHeight: "400px" }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Mit Innovative Location"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
+              className=" transition-all duration-500"
             />
             <div className="absolute inset-0 pointer-events-none border-4 border-primary/20 rounded-3xl" />
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col lg:col-span-2 justify-center" data-aos="fade-left">
+          <div
+            className="flex flex-col lg:col-span-2 justify-center"
+            data-aos="fade-left"
+          >
             <div className="space-y-8">
               <div>
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-                  Let's Create Something <span className="gradient-text">Amazing</span>
+                  Let's Create Something{" "}
+                  <span className="gradient-text">Amazing</span>
                 </h3>
                 <p className="text-muted-foreground">
-                  Get in touch with us today and let's discuss how we can help elevate your brand with stunning video content and powerful advertising campaigns.
+                  Get in touch with us today and let's discuss how we can help
+                  elevate your brand with stunning video content and powerful
+                  advertising campaigns.
                 </p>
               </div>
 
@@ -62,7 +74,9 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Call Us</p>
-                    <p className="font-semibold text-foreground">+91 8900069224</p>
+                    <p className="font-semibold text-foreground">
+                      +91 8900069224
+                    </p>
                   </div>
                 </a>
 
@@ -77,7 +91,9 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">WhatsApp</p>
-                    <p className="font-semibold text-foreground">Chat with us</p>
+                    <p className="font-semibold text-foreground">
+                      Chat with us
+                    </p>
                   </div>
                 </a>
 
@@ -90,7 +106,9 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email Us</p>
-                    <p className="font-semibold text-foreground">mitinnovative02@gmail.com</p>
+                    <p className="font-semibold text-foreground">
+                      mitinnovative02@gmail.com
+                    </p>
                   </div>
                 </a>
 
@@ -100,7 +118,9 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-semibold text-foreground">Ranaghat, Nadia, India Pin-741159</p>
+                    <p className="font-semibold text-foreground">
+                      taherpur, Nadia, Pin-741159 ,West Bengal
+                    </p>
                   </div>
                 </div>
               </div>
