@@ -2,7 +2,7 @@ import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-10 md:py-20 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10" />
@@ -14,7 +14,7 @@ const ContactForm = () => {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             Ready to <span className="gradient-text">Transform</span> Your Brand?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -22,9 +22,9 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className=" mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Google Map */}
-          <div className="relative rounded-3xl overflow-hidden border border-border h-[400px] lg:h-auto" data-aos="fade-right">
+          <div className="lg:col-span-3 relative rounded-3xl overflow-hidden border border-border h-100 lg:h-auto" data-aos="fade-right">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.4123456789!2d72.5714!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzIxLjAiTiA3MsKwMzQnMTcuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
@@ -40,7 +40,7 @@ const ContactForm = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col justify-center" data-aos="fade-left">
+          <div className="flex flex-col lg:col-span-2 justify-center" data-aos="fade-left">
             <div className="space-y-8">
               <div>
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">
@@ -62,12 +62,12 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Call Us</p>
-                    <p className="font-semibold text-foreground">+91 98765 43210</p>
+                    <p className="font-semibold text-foreground">+91 8900069224</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/918900069224"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 hover:translate-x-2 transition-all duration-300 group"
@@ -82,7 +82,7 @@ const ContactForm = () => {
                 </a>
 
                 <a
-                  href="mailto:hello@mitinnovative.com"
+                  href="mailto:mitinnovative02@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 hover:translate-x-2 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -90,7 +90,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email Us</p>
-                    <p className="font-semibold text-foreground">hello@mitinnovative.com</p>
+                    <p className="font-semibold text-foreground">mitinnovative02@gmail.com</p>
                   </div>
                 </a>
 
@@ -100,7 +100,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-semibold text-foreground">India</p>
+                    <p className="font-semibold text-foreground">Ranaghat, Nadia, India Pin-741159</p>
                   </div>
                 </div>
               </div>

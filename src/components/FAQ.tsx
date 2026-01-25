@@ -38,7 +38,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-24 relative">
+    <section id="faq" className="py-10 md:py-20  relative">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />
@@ -48,7 +48,7 @@ const FAQ = () => {
         {/* Section Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Got Questions?</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

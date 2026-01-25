@@ -50,7 +50,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
             <Button variant="hero" size="xl" onClick={scrollToContact}>
               <Phone className="w-5 h-5" />
               Contact Us
@@ -64,12 +64,12 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-20">
             {[
-              { value: "500+", label: "Projects Delivered" },
-              { value: "100+", label: "Happy Clients" },
-              { value: "5+", label: "Years Experience" },
+              { value: "5600+", label: "Projects Delivered" },
+              { value: "1000+", label: "Happy Clients" },
+              { value: "8+", label: "Years Experience" },
             ].map((stat, index) => (
               <div key={index} className="text-center" data-aos="zoom-in" data-aos-delay={500 + index * 100}>
-                <div className="text-3xl md:text-4xl font-display font-bold gradient-text">{stat.value}</div>
+                <div className="text-3xl md:text-3xl font-display font-bold gradient-text">{stat.value}</div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
               </div>
             ))}

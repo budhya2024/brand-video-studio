@@ -41,63 +41,63 @@ const services = [
     icon: Sparkles,
     title: "AI-Generated Videos",
     description: "Cutting-edge AI technology for unique video content",
-    price: null,
-    unit: null,
+    price: "₹1499",
+    unit: "per minute",
   },
   {
     icon: Camera,
     title: "Model Video Shoot & Production",
     description: "Professional video shoots with complete production",
-    price: null,
-    unit: null,
+    price: "₹1999",
+    unit: "per model",
   },
   {
     icon: FileText,
     title: "Script Writing & Content Planning",
     description: "Strategic content that tells your story",
-    price: null,
+    price: "₹599",
     unit: null,
   },
   {
     icon: Facebook,
     title: "Facebook Page Handling & Management",
     description: "Complete social media management solutions",
-    price: null,
+    price: "₹1499",
     unit: null,
   },
   {
     icon: Target,
     title: "Facebook Ads Campaign",
     description: "Targeted campaigns that convert",
-    price: null,
+    price: "₹1000",
     unit: null,
   },
   {
     icon: TrendingUp,
     title: "Google Ads Campaign",
     description: "Maximize your reach with Google advertising",
-    price: null,
+    price: "₹500",
     unit: null,
   },
   {
     icon: Users,
     title: "Real Facebook Followers Growth",
     description: "Organic growth strategies for authentic engagement",
-    price: null,
+    price: "₹1000",
     unit: null,
   },
   {
     icon: MapPin,
     title: "Google My Business Setup",
     description: "Optimize your local business presence",
-    price: null,
+    price: "₹499",
     unit: null,
   },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 relative">
+    <section id="services" className="py-10 md:py-20 relative">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/10 rounded-full blur-[100px]" />
@@ -108,7 +108,7 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">What We Offer</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

@@ -17,12 +17,12 @@ const Navbar = () => {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
@@ -36,7 +36,7 @@ const Navbar = () => {
     { name: "Demo", id: "demo" },
     { name: "Testimonials", id: "testimonials" },
     { name: "FAQ", id: "faq" },
-    { name: "Contact", id: "contact" }
+    { name: "Contact", id: "contact" },
   ];
 
   return (
@@ -53,23 +53,28 @@ const Navbar = () => {
             {/* Logo */}
             <a href="/" className="flex items-center gap-2 z-50">
               <span className="font-display text-2xl font-bold">
-                <span className="text-foreground">Mit</span>
-                <span className="gradient-text">Innovative</span>
+                <img
+                  src="src/assets/images/logo.png"
+                  alt="Logo"
+                  className="h-10 w-auto object-contain inline-block mr-2"
+                />
               </span>
             </a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.filter(link => link.id !== 'contact').map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="relative text-muted-foreground hover:text-foreground transition-colors group"
-                >
-                  {link.name}
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                </button>
-              ))}
+              {navLinks
+                .filter((link) => link.id !== "contact")
+                .map((link) => (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="relative text-muted-foreground hover:text-foreground transition-colors group"
+                  >
+                    {link.name}
+                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                  </button>
+                ))}
               <Button variant="hero" onClick={() => scrollToSection("contact")}>
                 Contact Us
               </Button>
@@ -80,7 +85,11 @@ const Navbar = () => {
               className="md:hidden p-2 text-foreground z-50"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -89,7 +98,7 @@ const Navbar = () => {
       {/* Full Screen Mobile Menu */}
       <div
         className={`fixed inset-0 z-40 md:hidden transition-transform duration-500 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Background */}
@@ -106,21 +115,25 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-3xl font-display font-bold text-foreground hover:text-primary transition-colors"
+                className="text-xl font-display font-bold text-foreground hover:text-primary transition-colors"
                 style={{
-                  animation: isMobileMenuOpen ? `slideInFromLeft 0.5s ease-out ${index * 0.1}s both` : 'none'
+                  animation: isMobileMenuOpen
+                    ? `slideInFromLeft 0.5s ease-out ${index * 0.1}s both`
+                    : "none",
                 }}
               >
                 {link.name}
               </button>
             ))}
-            <Button 
-              variant="hero" 
+            <Button
+              variant="hero"
               size="xl"
-              onClick={() => scrollToSection("contact")} 
+              onClick={() => scrollToSection("contact")}
               className="mt-4"
               style={{
-                animation: isMobileMenuOpen ? `slideInFromLeft 0.5s ease-out ${navLinks.length * 0.1}s both` : 'none'
+                animation: isMobileMenuOpen
+                  ? `slideInFromLeft 0.5s ease-out ${navLinks.length * 0.1}s both`
+                  : "none",
               }}
             >
               Contact Us
@@ -128,17 +141,19 @@ const Navbar = () => {
           </nav>
 
           {/* Social Links at Bottom */}
-          <div 
+          <div
             className="absolute bottom-12 flex gap-6"
             style={{
-              animation: isMobileMenuOpen ? `slideInFromLeft 0.5s ease-out ${(navLinks.length + 1) * 0.1}s both` : 'none'
+              animation: isMobileMenuOpen
+                ? `slideInFromLeft 0.5s ease-out ${(navLinks.length + 1) * 0.1}s both`
+                : "none",
             }}
           >
             {[
               { name: "WhatsApp", href: "https://wa.me/919876543210" },
               { name: "Facebook", href: "https://facebook.com" },
               { name: "Instagram", href: "https://instagram.com" },
-              { name: "YouTube", href: "https://youtube.com" }
+              { name: "YouTube", href: "https://youtube.com" },
             ].map((social, index) => (
               <a
                 key={index}
