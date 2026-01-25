@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import CTABanner from "@/components/CTABanner";
 import Demo from "@/components/Demo";
 import Testimonials from "@/components/Testimonials";
 import MeetOwner from "@/components/MeetOwner";
@@ -40,7 +39,6 @@ const Index = () => {
       <SocialIcons />
       <Hero />
       <Services />
-      <CTABanner />
       <Demo />
       <Testimonials />
       <MeetOwner />
