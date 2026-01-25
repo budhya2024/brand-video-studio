@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Demo from "@/components/Demo";
 import Testimonials from "@/components/Testimonials";
+import MeetOwner from "@/components/MeetOwner";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -16,12 +17,11 @@ const Index = () => {
     AOS.init({
       duration: 800,
       easing: "ease-out-cubic",
-      once: false, // Animate multiple times
-      mirror: true, // Animate on scroll up too
+      once: false,
+      mirror: true,
       offset: 100,
     });
 
-    // Refresh AOS on scroll for better performance
     window.addEventListener('scroll', () => {
       AOS.refresh();
     });
@@ -41,6 +41,7 @@ const Index = () => {
       <Services />
       <Demo />
       <Testimonials />
+      <MeetOwner />
       <FAQ />
       <ContactForm />
       <Footer />
