@@ -40,7 +40,7 @@ const MeetOwner = () => {
               <div className="absolute -inset-2 bg-gradient-to-br from-primary to-[hsl(350,100%,60%)] rounded-2xl opacity-30" />
 
               {/* Image */}
-              <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden border-2 border-primary/30">
+              <div className="relative   w-full max-w-sm aspect-square rounded-2xl overflow-hidden border-2 border-primary/30">
                 <img
                   src={ownerImage}
                   alt="Amit Karmakar - Founder & CEO"

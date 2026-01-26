@@ -162,26 +162,20 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border pt-6">
-          <div className="flex flex-col items-center justify-center gap-1 sm:flex-row sm:gap-3">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Mit Innovative. All rights reserved.
-            </p>
-            <span className="hidden sm:block text-muted-foreground">|</span>
-            <p className="text-sm text-muted-foreground">
-              Developed by{" "}
-              <span className="font-medium">
-                <a
-                  href="https://techshifttechnology.netlify.app/"
-                  target="/blabk"
-                >
-                  {" "}
-                  TechShift Technology
-                </a>
-              </span>
-            </p>
-          </div>
-        </div>
+     <div className="border-t border-border pt-6">
+  <div className="flex flex-col items-center justify-center gap-1 text-center">
+    <p className="text-sm text-muted-foreground">
+      © {new Date().getFullYear()} Mit Innovative. All rights reserved.
+    </p>
+
+    <p className="text-xs text-muted-foreground/80">
+      Udyam Registration No:{" "}
+      <span className="font-medium text-foreground">
+        UDYAM-WB-15-0104736
+      </span>
+    </p>
+  </div>
+</div>
       </div>
     </footer>
   );

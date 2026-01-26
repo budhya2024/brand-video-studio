@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 const videos = [
-  "x_UJRgIYu8A",
-  "E_bm1oxxtdI",
-  "w3XfMDxTEPk",
-  "tz9pycho190"
+  "LD6LWdL2k2o",
+  "XvUdCjVnEpw",
+  "3vlXtXoR5pE",
+  "V51E7xCSJcQ"
 ];
 
 const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@yourchannelname"; 
