@@ -33,7 +33,7 @@ const services = [
     icon: Image,
     title: "Social Media Poster & Banner",
     description: "Eye-catching designs for all platforms",
-    price: "₹300",
+    price: "₹299",
     unit: "per design",
     featured: true,
   },
@@ -69,21 +69,21 @@ const services = [
     icon: Target,
     title: "Facebook Ads Campaign",
     description: "Targeted campaigns that convert",
-    price: "₹1000",
+    price: "₹999",
     unit: null,
   },
   {
     icon: TrendingUp,
     title: "Google Ads Campaign",
     description: "Maximize your reach with Google advertising",
-    price: "₹500",
+    price: "₹499",
     unit: null,
   },
   {
     icon: Users,
     title: "Real Facebook Followers Growth",
     description: "Organic growth strategies for authentic engagement",
-    price: "₹1000",
+    price: "₹999",
     unit: null,
   },
   {
@@ -94,6 +94,7 @@ const services = [
     unit: null,
   },
 ];
+
 
 const Services = () => {
   return (

@@ -1,5 +1,5 @@
 import { Video, Award, Users, Sparkles } from "lucide-react";
-import ownerImage from "/images/founderamit.png";
+import ownerImage from "/images/amit.png";
 
 const MeetOwner = () => {
   const highlights = [
@@ -40,11 +40,11 @@ const MeetOwner = () => {
               <div className="absolute -inset-2 bg-gradient-to-br from-primary to-[hsl(350,100%,60%)] rounded-2xl opacity-30" />
 
               {/* Image */}
-              <div className="relative   w-full max-w-sm aspect-square rounded-2xl overflow-hidden border-2 border-primary/30">
+              <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden border-2 border-primary/30 pt-10">
                 <img
                   src={ownerImage}
                   alt="Amit Karmakar - Founder & CEO"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
