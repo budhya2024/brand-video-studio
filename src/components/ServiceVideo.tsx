@@ -44,11 +44,13 @@ const ServiceVideo = () => {
               Why Choose Us
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold mt-4 mb-6">
-              Transform Your <span className="gradient-text">Vision</span> Into Reality
+              Transform Your <span className="gradient-text">Vision</span> Into
+              Reality
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              We bring your ideas to life with cutting-edge video production and creative services 
-              that help your brand stand out in the digital landscape.
+              We bring your ideas to life with cutting-edge video production and
+              creative services that help your brand stand out in the digital
+              landscape.
             </p>
 
             {/* Features List */}
@@ -67,18 +69,18 @@ const ServiceVideo = () => {
             <div className="relative max-w-md mx-auto lg:ml-auto lg:mr-0">
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-[hsl(350,100%,60%)]/20 rounded-2xl blur-xl" />
-              
+
               {/* Video Container */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 bg-card shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
                 <AspectRatio ratio={4 / 5}>
                   <video
                     ref={videoRef}
-                    src=""
+                    src="/images/MY ADD.mp4"
                     className="w-full h-full object-cover"
                     onEnded={handleVideoEnd}
                     playsInline
                   />
-                  
+
                   {/* Play/Pause Overlay Button */}
                   <button
                     onClick={togglePlay}
