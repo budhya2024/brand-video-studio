@@ -1,7 +1,26 @@
-import { CheckCircle, Play } from "lucide-react";
+import { useState, useRef } from "react";
+import { CheckCircle, Play, Pause } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const ServiceVideo = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleVideoEnd = () => {
+    setIsPlaying(false);
+  };
+
   const features = [
     "Professional video editing with cinematic quality",
     "AI-powered content creation tools",
@@ -52,18 +71,28 @@ const ServiceVideo = () => {
               {/* Video Container */}
               <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 bg-card shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
                 <AspectRatio ratio={4 / 5}>
-                  <iframe
-                    src="https://www.youtube.com/embed/LD6LWdL2k2o?rel=0&modestbranding=1"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
+                  <video
+                    ref={videoRef}
+                    src=""
+                    className="w-full h-full object-cover"
+                    onEnded={handleVideoEnd}
+                    playsInline
                   />
+                  
+                  {/* Play/Pause Overlay Button */}
+                  <button
+                    onClick={togglePlay}
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors duration-300 group"
+                  >
+                    <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                      {isPlaying ? (
+                        <Pause className="w-8 h-8 text-primary-foreground" />
+                      ) : (
+                        <Play className="w-8 h-8 text-primary-foreground ml-1" />
+                      )}
+                    </div>
+                  </button>
                 </AspectRatio>
-              </div>
-
-              {/* Decorative Play Button Overlay (optional visual) */}
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                <Play className="w-6 h-6 text-primary-foreground fill-current ml-1" />
               </div>
             </div>
           </div>
