@@ -181,7 +181,7 @@ const FacebookAdsPricing = () => {
   ];
 
   return (
-    <section id="pricing" className=" relative">
+    <section id="pricing" className="relative">
       {/* Background Effects matching Services section */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-0 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />

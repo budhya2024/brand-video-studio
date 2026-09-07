@@ -163,7 +163,7 @@ const Footer = () => {
           </p>
 
           <p className="text-xs text-muted-foreground flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-            <span>MSME Registered (UDYAM-WB-15-0104736)</span>
+            <span>MSME Registered</span>
             <span>•</span>
             <span>Trade License Registered</span>
             <span>•</span>
