@@ -34,6 +34,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Services", id: "services" },
+    { name: "Meta ads", id: "pricing" },
     { name: "Demo", id: "demo" },
     { name: "Testimonials", id: "testimonials" },
     { name: "FAQ", id: "faq" },
@@ -43,11 +44,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-border"
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-xl border-b border-border"
+          : "bg-transparent"
+          }`}
       >
         <div className="container px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -92,9 +92,8 @@ const Navbar = () => {
 
       {/* Full Screen Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-transform duration-500 ease-in-out ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-0 z-40 md:hidden transition-transform duration-500 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Background */}
         <div className="absolute inset-0 bg-background">

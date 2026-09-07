@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import ServiceVideo from "@/components/ServiceVideo";
+import FacebookAdsPricing from "@/components/FacebookAdsPricing";
 import Demo from "@/components/Demo";
 import Testimonials from "@/components/Testimonials";
 import MeetOwner from "@/components/MeetOwner";
@@ -41,6 +42,7 @@ const Index = () => {
       <Hero />
       <Services />
       <ServiceVideo />
+      <FacebookAdsPricing />
       <Demo />
       <Testimonials />
       <MeetOwner />
